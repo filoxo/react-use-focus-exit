@@ -10,7 +10,7 @@ import postcss from "rollup-plugin-postcss";
 
 const prod = process.env.NODE_ENV === "production";
 
-const config = [
+export default [
   {
     input: "src/index.js",
     output: [
@@ -37,12 +37,8 @@ const config = [
       external(),
       prod && terser()
     ]
-  }
-];
-
-if (!prod) {
-  // Demo site build config
-  config.push({
+  },
+  {
     input: "demo/src/index.js",
     output: {
       file: "demo/index.js",
@@ -70,10 +66,8 @@ if (!prod) {
       postcss({
         modules: true
       }),
-      serve("demo"),
-      livereload(["src", "demo"])
+      !prod && serve("demo"),
+      !prod && livereload(["src", "demo"])
     ]
-  });
-}
-
-export default config;
+  }
+];

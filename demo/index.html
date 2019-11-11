@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>react-visible-focus demo</title>
+  <style>
+    /* html-template plugin does not livereload */
+    body {
+      background: LIGHTSTEELBLUE;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: .5rem;
+    }
+
+    main {
+      background: white;
+      border-radius: 6px;
+      margin: 1rem auto;
+      max-width: 500px;
+      padding: 1.2rem;
+    }
+    main > :first-child {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- html-template plugin does not livereload -->
+    <h1>react-use-focus-exit</h1>
+    <p>Use this hook when you want to listen for when focus exits a specific container.</p>
+    <div id="root"></div>
+  </main>
+
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script  src="index.js"></script>
+</body>
+</html>

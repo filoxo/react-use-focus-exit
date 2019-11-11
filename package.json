@@ -13,7 +13,7 @@
     "start": "rollup -c -w",
     "prepublish": "npm run build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages --dist . --src '{demo/index.html,demo/index.js,dist/**/*}' --git git"
+    "deploy": "gh-pages --dist demo --src '{index.html,index.js}' --git git"
   },
   "keywords": [
     "react",

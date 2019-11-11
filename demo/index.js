@@ -1,5 +1,3 @@
-
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.head.appendChild(r) })(document);
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('react'), require('react-dom')) :
   typeof define === 'function' && define.amd ? define(['react', 'react-dom'], factory) :
@@ -69,78 +67,66 @@
     throw new TypeError("Invalid attempt to destructure non-iterable instance");
   }
 
-  function _extends$1() {
-    _extends$1 = Object.assign || function (target) {
-      for (var i = 1; i < arguments.length; i++) {
-        var source = arguments[i];
+  function e() {
+    return (e = Object.assign || function (r) {
+      for (var t = 1; t < arguments.length; t++) {
+        var e = arguments[t];
 
-        for (var key in source) {
-          if (Object.prototype.hasOwnProperty.call(source, key)) {
-            target[key] = source[key];
-          }
+        for (var n in e) {
+          Object.prototype.hasOwnProperty.call(e, n) && (r[n] = e[n]);
         }
       }
 
-      return target;
-    };
-
-    return _extends$1.apply(this, arguments);
+      return r;
+    }).apply(this, arguments);
   }
 
-  function _objectWithoutPropertiesLoose(source, excluded) {
-    if (source == null) return {};
-    var target = {};
-    var sourceKeys = Object.keys(source);
-    var key, i;
+  function n(r, t) {
+    if (null == r) return {};
 
-    for (i = 0; i < sourceKeys.length; i++) {
-      key = sourceKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      target[key] = source[key];
-    }
+    var e,
+        n,
+        o = function (r, t) {
+      if (null == r) return {};
+      var e,
+          n,
+          o = {},
+          c = Object.keys(r);
 
-    return target;
-  }
+      for (n = 0; n < c.length; n++) {
+        e = c[n], t.indexOf(e) >= 0 || (o[e] = r[e]);
+      }
 
-  function _objectWithoutProperties(source, excluded) {
-    if (source == null) return {};
-
-    var target = _objectWithoutPropertiesLoose(source, excluded);
-
-    var key, i;
+      return o;
+    }(r, t);
 
     if (Object.getOwnPropertySymbols) {
-      var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+      var c = Object.getOwnPropertySymbols(r);
 
-      for (i = 0; i < sourceSymbolKeys.length; i++) {
-        key = sourceSymbolKeys[i];
-        if (excluded.indexOf(key) >= 0) continue;
-        if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-        target[key] = source[key];
+      for (n = 0; n < c.length; n++) {
+        e = c[n], t.indexOf(e) >= 0 || Object.prototype.propertyIsEnumerable.call(r, e) && (o[e] = r[e]);
       }
     }
 
-    return target;
+    return o;
   }
 
-  function useFocusExit(containerRef, callback) {
-    var checkFocusExit = React$1.useCallback(function (event) {
-      callback(containerRef.current.contains(event.relatedTarget));
-    }, [containerRef, callback]);
-    return checkFocusExit;
+  function o(t, e) {
+    return React$1.useCallback(function (r) {
+      e(t.current.contains(r.relatedTarget));
+    }, [t, e]);
   }
 
-  function FocusExit(_ref) {
-    var onFocusExit = _ref.onFocusExit,
-        _ref$elem = _ref.elem,
-        Elem = _ref$elem === void 0 ? "div" : _ref$elem,
-        props = _objectWithoutProperties(_ref, ["onFocusExit", "elem"]);
-
-    var containerRef = React$1.useRef();
-    var onBlur = useFocusExit(containerRef, onFocusExit);
-    return React.createElement(Elem, _extends$1({}, props, {
-      onBlur: onBlur,
-      ref: containerRef
+  function c(r) {
+    var c = r.onFocusExit,
+        u = r.elem,
+        i = void 0 === u ? "div" : u,
+        l = n(r, ["onFocusExit", "elem"]),
+        a = React$1.useRef(),
+        f = o(a, c);
+    return React.createElement(i, e({}, l, {
+      onBlur: f,
+      ref: a
     }));
   }
 
@@ -219,7 +205,7 @@
         return clearTimeout(timer);
       };
     }, [formContainsFocus]);
-    return React$1__default.createElement(FocusExit, {
+    return React$1__default.createElement(c, {
       elem: "form",
       onSubmit: function onSubmit(e) {
         return e.preventDefault();
@@ -271,7 +257,7 @@
     */
 
 
-    var onBlur = useFocusExit(menuContainerRef, function (focusIsWithin) {
+    var onBlur = o(menuContainerRef, function (focusIsWithin) {
       setIsOpen(focusIsWithin);
     });
     React$1__default.useEffect(function () {

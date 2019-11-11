@@ -67,7 +67,7 @@ export default function YourComponent(props) {
 }
 ```
 
-<small>Note: `onBlur`</small>
+<small>Note: React `onBlur` and `onFocus` events bubble up, which is non-standard behavior but intentional from the library. See [issue#6410](https://github.com/facebook/react/issues/6410#issuecomment-207064994) for more info.</small>
 
 #### Params
 

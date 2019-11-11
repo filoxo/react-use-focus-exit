@@ -1,0 +1,18 @@
+
+.DemoMenuAnchor {
+  box-sizing: border-box;
+  color: steelblue;
+  display: block;
+  font-size: .8rem;
+  padding: 4px 8px;
+  text-decoration: none;
+  width: 100%;  
+}
+.DemoMenuAnchor:hover, 
+.DemoMenuAnchor:focus {
+  background: rgba(70, 130, 180, .2);
+}
+
+.DemoMenuAnchor:visited {
+  color: darkslateblue;
+}

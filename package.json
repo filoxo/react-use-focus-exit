@@ -1,0 +1,48 @@
+{
+  "name": "react-use-focus-exit",
+  "version": "1.0.0",
+  "description": "A React component or hook that handles when focus exits a container element",
+  "browser": "dist/react-use-focus-exit.umd.js",
+  "module": "dist/react-use-focus-exit.esm.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "NODE_ENV=production rollup -c",
+    "start": "rollup -c -w",
+    "prepublish": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages --dist . --src '{demo/index.html,demo/index.js,dist/**/*}' --git git"
+  },
+  "keywords": [
+    "react",
+    "focus", "exit", "blur", "outside", "onclickoutside"
+  ],
+  "author": "Carlos Filoteo",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
+    "jest": "^24.9.0",
+    "rollup": "^1.21.4",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-generate-html-template": "^1.5.0",
+    "rollup-plugin-livereload": "^1.0.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-terser": "^5.1.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "rollup-plugin-postcss": "^2.0.3"
+  },
+  "peerDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
+}

@@ -1,0 +1,7 @@
+.DemoFormBanner {
+  background: darkred;
+  color: white;
+  font-size: 0.8rem;
+  margin: 0 -.5rem .5rem;
+  padding: .25rem .5rem;
+}

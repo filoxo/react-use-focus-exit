@@ -8,7 +8,7 @@
     "dist/"
   ],
   "scripts": {
-    "test": "jest",
+    "test": "npm run start & cypress open",
     "build": "NODE_ENV=production rollup -c",
     "start": "rollup -c -w",
     "prepublish": "npm run build",
@@ -17,7 +17,11 @@
   },
   "keywords": [
     "react",
-    "focus", "exit", "blur", "outside", "onclickoutside"
+    "focus",
+    "exit",
+    "blur",
+    "outside",
+    "onclickoutside"
   ],
   "author": "Carlos Filoteo",
   "license": "MIT",
@@ -38,6 +42,9 @@
     "rollup-plugin-terser": "^5.1.2"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^5.0.2",
+    "cypress": "^3.6.1",
+    "cypress-plugin-tab": "^1.0.3",
     "gh-pages": "^2.1.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",

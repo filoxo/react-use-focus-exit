@@ -1,6 +1,6 @@
 {
   "name": "react-use-focus-exit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React component or hook that handles when focus exits a container element",
   "browser": "dist/react-use-focus-exit.umd.js",
   "module": "dist/react-use-focus-exit.esm.js",

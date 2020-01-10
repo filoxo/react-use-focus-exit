@@ -7,6 +7,7 @@ import serve from "rollup-plugin-serve";
 import livereload from "rollup-plugin-livereload";
 import htmlTemplate from "rollup-plugin-generate-html-template";
 import postcss from "rollup-plugin-postcss";
+import filesize from "rollup-plugin-filesize";
 
 const prod = process.env.NODE_ENV === "production";
 
@@ -35,7 +36,8 @@ export default [
         exclude: "node_modules/**"
       }),
       external(),
-      prod && terser()
+      prod && terser(),
+      prod && filesize()
     ]
   },
   {

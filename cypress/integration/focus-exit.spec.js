@@ -29,7 +29,7 @@ describe("FocusExit e2e", function() {
     cy.visit("/");
     cy.findByLabelText("Email:").click();
     cy.findByText("Submit").focus();
-    cy.get("body").focus();
+    cy.get("body").click();
 
     cy.queryByText(/Focus has left the form/i).should("exist");
   });

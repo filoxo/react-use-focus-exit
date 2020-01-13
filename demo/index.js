@@ -2,7 +2,7 @@
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('react'), require('react-dom')) :
   typeof define === 'function' && define.amd ? define(['react', 'react-dom'], factory) :
   (global = global || self, factory(global.React, global.ReactDOM));
-}(this, function (React$1, ReactDOM) { 'use strict';
+}(this, (function (React$1, ReactDOM) { 'use strict';
 
   var React$1__default = 'default' in React$1 ? React$1['default'] : React$1;
   ReactDOM = ReactDOM && ReactDOM.hasOwnProperty('default') ? ReactDOM['default'] : ReactDOM;
@@ -372,4 +372,4 @@
 
   ReactDOM.render(React$1__default.createElement(App, null), document.getElementById("root"));
 
-}));
+})));

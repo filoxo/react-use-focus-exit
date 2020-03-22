@@ -4,6 +4,8 @@ The purpose of this library is to provide a way to handle when focus *exits a sp
 
 I created this as a very lightweight alternative to react-onclickoutside, which seems to do a lot more than necessary and caused performance problems for me.
 
+See it in action at https://filoxo.github.io/react-use-focus-exit/
+
 ## Install
 
 ```sh

@@ -33,7 +33,6 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.1",
-    "jest": "^25.1.0",
     "rollup": "^2.1.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-filesize": "^6.2.1",

@@ -22,7 +22,7 @@ npm i -S react-use-focus-exit
 import React from 'react';
 import { FocusExit } from "react-use-focus-exit";
 
-export default function YourComponent({children, ...props}) {
+export default function YourComponent(props) {
   return (
     <FocusExit
       onFocusExit={focusIsWithin => {
@@ -34,7 +34,7 @@ export default function YourComponent({children, ...props}) {
       }}
       elem="span"
       {...props}
-    >{children}</FocusExit>
+    />
   )
 }
 ```
@@ -48,7 +48,7 @@ export default function YourComponent({children, ...props}) {
 
 ### useFocusExit hook
 
-useFocusExit gives you the ability to bind the onBlur handler manually. The only use case I can think of for using this instead of the FocusExit component is to compose any additional logic you might need to add with this library's `onBlur`.
+`useFocusExit` gives you the ability to bind the `onBlur` handler manually. The only use case I can think of for using this instead of the FocusExit component is to compose any additional logic you might need to add with this library's `onBlur`.
 
 ```js
 import React, { useRef } from 'react';
